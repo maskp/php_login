@@ -43,7 +43,7 @@ function getComments($conn){
 		echo $row['date'];
 		echo "</p>
 		<form class='delete-form' method='post' action='".deleteComments($conn)."'> 
-		<input type='hidden' name='message' value='".$row['cid']."'/>
+		<input type='hidden' name='cid' value='".$row['cid']."'/>
 			<input type='submit' name='delete' value='delete'/>
 
 		</form>
