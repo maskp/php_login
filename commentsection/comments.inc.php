@@ -31,6 +31,7 @@ function editComments($conn){
 
 
 
+
 function getComments($conn){
 	$sql = 'select * from comments';
 	$result = mysqli_query($conn,$sql);
@@ -41,6 +42,12 @@ function getComments($conn){
 		echo $row['uid'].'<br>';
 		echo $row['date'];
 		echo "</p>
+		<form class='delete-form' method='post' action='".deleteComments($conn)."'> 
+		<input type='hidden' name='message' value='".$row['cid']."'/>
+			<input type='submit' name='delete' value='delete'/>
+
+		</form>
+
 		<form class='edit-form' method='post' action='editcomment.php'>
 			<input type='hidden' name='cid' value='".$row['cid']."'/>
 			<input type='hidden' name='uid' value='".$row['uid']."'/>
@@ -53,4 +60,14 @@ function getComments($conn){
 
 		</div>";
 	  }
+}
+
+function deleteComments($conn){
+	if(isset($_POST['delete'])){
+	$cid=$_POST['cid'];
+	$sql ="delete from comments where cid='$cid'";
+	$result = mysqli_query($conn,$sql);
+	header('Location: index.php');
+
+}
 }

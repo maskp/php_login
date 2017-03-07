@@ -55,3 +55,21 @@ button{
 .edit-form input[type=submit]:hover{
 	opacity:.7;
 }
+
+.delete-form{
+	position:absolute;
+	top:0px;
+	right:60px;
+}
+
+.delete-form{
+	width:40px;
+	height:20px;
+	color:#282828;
+	background-color:#fff;
+	opacity:.7;
+}
+
+.delete-form input[submit]:hover{
+	opacity: 1;
+}
