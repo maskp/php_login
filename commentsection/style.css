@@ -1,0 +1,57 @@
+body{
+	background:#777;
+
+}
+
+
+textarea{
+	width:850px;
+	height:80px;
+	background:#fff;
+	resize:none;
+}
+
+button{
+	width:100px;
+	height:30px;
+	background:#282828;
+	border:none;
+	color:#fff;
+	font-family:monospace;
+	cursor:pointer;
+
+}
+
+.comment-box{
+	width:815px;
+	padding:20px;
+	margin-bottom:4px;
+	background-color:#fff;
+	border-radius:4px;
+	position:relative;
+
+}
+
+.comment-box p{
+	font-famly:monospace;
+	font-size:14px;
+	line-height:16px;
+
+}
+
+.edit-form{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+.edit-form input[type=submit]{
+	width:40px;
+	height:20px;
+	color:#282828;
+	background:#fff;
+}
+
+.edit-form input[type=submit]:hover{
+	opacity:.7;
+}

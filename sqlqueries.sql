@@ -1,0 +1,1 @@
+create table comments(cid int not null AUTO_INCREMENT primary key,uid varchar(128) not null,date datetime not null,message text not null) values ();
